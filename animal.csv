@@ -1,0 +1,11 @@
+,Animals,Age,Visits,Priority
+a,cat,2.5,1,y
+b,cat,3.0,3,y
+c,turtle,0.5,2,n
+d,dog,,3,y
+e,dog,5.0,2,n
+f,cat,2.0,3,n
+g,turtle,4.5,1,n
+h,cat,,1,y
+i,dog,7.0,2,n
+j,dog,3.0,1,n

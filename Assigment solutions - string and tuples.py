@@ -1,0 +1,347 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # String solutions
+
+# #### 1.	Define different types of variables (integer, boolean, string, float, complex) and print their values and their types
+
+# In[3]:
+
+
+name="Python programming"
+print('Name:',name)
+print('Type:',type(name))
+
+
+# In[4]:
+
+
+number=3400
+print('Number:',number)
+print('Type:',type(number))
+
+
+# In[5]:
+
+
+x=True
+print(x)
+print(type(x))
+
+
+# In[7]:
+
+
+num=22.34
+print('Num:',num)
+print('Type:',type(num))
+
+
+# In[10]:
+
+
+com=10+10j
+print('Com:',com)
+print('Type:',type(com))
+
+
+# 
+# #### 2.	In the above question convert float variable into integer type and integer variable into str type.
+
+# In[13]:
+
+
+#converting float variable into int
+print('Float variable:',num)
+print('Float to int:',int(num))
+
+
+# In[16]:
+
+
+#converting int variable into str
+str(number)
+
+
+# 
+# #### 3.	What you will get coverting “abc” into boolean ?
+
+# In[17]:
+
+
+b=bool("abc")
+b
+
+#We get True
+
+
+# #### 4.  Print the substring from index 2 to index 4 for any given string. For example (​llo​) from “Hello World” 
+
+# In[1]:
+
+
+a="DataFolkz"
+a[2:5]
+
+
+# #### 5.	Write a program to check a substring in a given string. For example 'e' is present in the word 'Umbrella' 
+
+# In[4]:
+
+
+print("F" in "DataFolkz")
+print("f" in "DataFolkz")
+
+
+# #### 6.	Use the correct comparison operator to check if 5 is not equal to 10.
+
+# In[20]:
+
+
+5!=10
+
+
+# #### 7.	Write a program to get a string from the user and sort the words of the string in alphabetical order.
+
+# In[22]:
+
+
+word=input('Enter a word:')
+sorted(word)
+
+
+# In[2]:
+
+
+#another method
+
+string=input('Enter a string:')
+words=string.split()
+
+print(sorted(words))
+
+
+# 
+# 
+# #### 8.Join two words with ‘ – ‘
+
+# In[24]:
+
+
+words='Data','Science'
+print("-".join(words))
+
+
+# #### 9. Find all occurrences of “INDIA” in a given string ignoring the case.  
+# ​input_str = "Welcome to INDIA. india is awesome. 
+
+# In[8]:
+
+
+input_str = "Welcome to INDIA. india is awesome"
+#converting string into upper case
+input_str = input_str.upper()
+#finding the count of INDIA
+input_str.count("INDIA")
+
+
+# In[6]:
+
+
+#another method
+input_str = "Welcome to INDIA. india is awesome"
+#converting string into lower case
+input_str = input_str.lower()
+#finding the count of INDIA
+input_str.count("india")
+
+
+# #### 10.	Replace first two ‘l’ with ‘n’ in ‘Hello World’
+
+# In[27]:
+
+
+x='Hello World'
+x.replace('l','n',2)
+
+
+# #### 11.	Write a program that takes your full name as input and displays the abbreviations of the first and middle names except the last name which is displayed as it is. For example, if your name is Robert Brett Roser, then the output should be R.B.Roser.
+
+# In[31]:
+
+
+first='Robert'
+middle='brett'
+last='Roser'
+first[0]+'.'+middle[0].upper()+"."+last
+
+
+# #### 12.	Write a program to check if a given string is a Palindrome.
+# A palindrome reads same from front and back e.g.- aba, ccaacc, mom, etc.
+# 
+# 
+
+# In[7]:
+
+
+pal='mom'
+print(pal==pal[::-1])
+
+#example of not palindrome
+pal2='moon'
+pal2==pal2[::-1]
+
+
+#   
+
+# # Tuples and Sets solutions
+
+# #### 1.	Write a Python program to add an item in a tuple.
+
+# As tuple is immutable , you cannot change or append anything in tuple 
+
+# But there is an alternate way to add anything to tuple . Here it is :
+
+# In[10]:
+
+
+tuple1=(12,45,23)
+print(tuple1)
+tuple2=tuple1 + (56,"yes")
+print(tuple2)
+
+
+# #### 2.Write a program to reverse a tuple .
+
+# In[11]:
+
+
+mytuple=(5,4,3,2,1)
+print("My tuple :",mytuple)
+print("Reversed tuple: ",mytuple[::-1])
+
+
+# #### 3. 	Swap the following two tuples
+# tuple1 = (11, 22)
+# tuple2 = (99, 88)
+# 
+
+# In[11]:
+
+
+tuple1 = (11, 22)
+tuple2 = (99, 88)
+print("Before:\nTuple1 :",tuple1); print("Tuple2 :",tuple2)
+
+#swaping the tuples
+tuple1,tuple2=tuple2,tuple1
+
+print("After:\nTuple1:",tuple1)
+print("Tuple2:",tuple2)
+
+
+# #### 4. ​Modify the first item (22) of a list inside a following tuple to 222  
+# tuple1 = (11, [22, 33], 44, 55)  
+
+# In[14]:
+
+
+tuple1 = (11, [22, 33], 44, 55)
+print("Before:",tuple1)
+#modifying 
+tuple1[1][0]=222
+print("After :",tuple1)
+
+
+# #### 5. Write a Python program to unpack a tuple in several variables 
+
+# In[18]:
+
+
+mytup=(22,33,66,88,99)
+x,y,z,a,b = mytup
+print(x,y,z,a,b)
+
+
+# #### 6. Write a Python program to add member(s) in an empty set. 
+
+# In[22]:
+
+
+#making an empty set
+myset=set()
+#adding value to the set
+myset.add(22)
+print(myset)
+
+
+# #### 7.Write a Python program to create an intersection of sets
+
+# In[28]:
+
+
+set1={12,23,45,67}
+set2={21,32,45,76}
+print(set1.intersection(set2))
+#or
+print(set1&set2)
+
+
+# #### 8.Write a Python program to create a symmetric difference in sets
+
+# In[30]:
+
+
+set3={90,30,40}
+set4={22,30,66}
+set3^set4
+
+
+# #### 9. Return a set of identical items from a given two Python set 
+# set1 = {10, 20, 30, 40, 50} 
+# set2 = {30, 40, 50, 60, 70} 
+
+# In[31]:
+
+
+set1 = {10, 20, 30, 40, 50} 
+set2 = {30, 40, 50, 60, 70} 
+print("Identical items:",set1&set2)
+
+
+# #### 10.Remove 10, 20, 30 elements from a following set at once 
+#  set1 = {10, 20, 30, 40, 50} 
+
+# In[34]:
+
+
+set1 = {10, 20, 30, 40, 50} 
+set1.difference_update({30,40,50})
+print(set1)
+
+
+# #### 11. Access value 20 from the following tuple  
+# example = ("Pooja", [10, 20, 30], (25, 50, 15)) 
+
+# In[35]:
+
+
+example = ("Pooja", [10, 20, 30], (25, 50, 15)) 
+example[1][1]
+
+
+# #### 12.Count the number of occurrences of item 50 from a tuple 
+# numbers = (50, 10, 60, 70, 50)   
+
+# In[36]:
+
+
+numbers = (50, 10, 60, 70, 50)
+numbers.count(50)
+
+
+# In[ ]:
+
+
+
+
